@@ -1,36 +1,37 @@
+* 
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   color: #333;
 }
-a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
-nav{
-
-    padding: 20px;
-    background-color:  rgb(166, 163, 187);
-    font-family: 'Khand', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
 header {
-  background-color: #5a518a;
-  padding: 1rem 2rem;
+    background: #5a518a;
+    color: #fff;
+    padding: 0;
+  }
+  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 80px;
 }
-a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+  a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
-nav{
-
+  nav{
     padding: 20px;
     background-color:  rgba(85, 80, 134, 1);
     font-family: 'Khand', sans-serif;
@@ -38,10 +39,19 @@ nav{
     justify-content: space-around;
     text-align: center;
 }
-.navbar {
+  
+  
+nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
 }
 
 .logo {
