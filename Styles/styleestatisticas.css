@@ -1,9 +1,38 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+
+header {
+  background-color: #5a518a;
+  color: #fff;
+}
+
+
+nav {
+  padding: 20px;
+  background-color: rgba(85, 80, 134, 1);
+  font-family: 'Khand', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+.nav-container {
+  display: flex;
+  margin-top: 140px;
+}
+
 
 a {
     color: #fff;
@@ -56,6 +85,8 @@ header {
     gap: 20px;
     align-items: center;
     padding-bottom: 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .bloco {
@@ -67,28 +98,34 @@ header {
     font-weight: bold;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
+
 
 .roxo-escuro {
     background-color: #5a518a;
-    margin-left: 800px;
+    margin-inline-start: 600px;
+    margin-inline-end: 0;
 }
 
 .roxo-medio {
     background-color: #7664d4;
-    margin-right: 800px;
+    margin-inline-end: 600px;
+    margin-inline-start: 0;
 }
 
 .roxo-claro {
     background-color: #c3baf4;
     color: #ffffff;
-    margin-left: 800px;
+    margin-inline-start: 600px;
+    margin-inline-end: 0;
 }
 
 .roxo-escurodois {
     background-color: #5a518a;
     color: #fff;
-    margin-right: 800px;
+    margin-inline-end: 600px;
+    margin-inline-start: 0;
 }
 
 a {
