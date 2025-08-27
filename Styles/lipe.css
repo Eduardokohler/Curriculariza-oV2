@@ -91,11 +91,12 @@ li {
 
 .title,
 main h1 {
-  text-align: center;
+  text-align: left;
   margin: 40px 0 20px 0;
   color: #5a518a;
   font-size: 2em;
   font-weight: bold;
+  padding-bottom: 30px;
 }
 
 
