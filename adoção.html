@@ -81,6 +81,39 @@
         transform: scale(1.1);
         }
 
+        .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+    width: 200px; /* Ajuste o tamanho desejado */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+    transform: scale(1.1);
+}
+
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
     </style>
 </head>
 <body>
@@ -125,11 +158,13 @@
     <article>
         <div class="carousel-container">
             <div class="carousel">
-                 <img src="fotos/carrossel/barto.jpg" alt="Bartô">
-                <img src="fotos/carrossel/luzia.jpg" alt="Luzia">
-                 <img src="fotos/carrossel/mimi.jpg" alt="Mimi">
-                 <img src="fotos/carrossel/difusor.jpg" alt="Difusor">
-       '' </div>
+                <img src="fotos/barto_0.jpeg" alt="Bartô">
+                <img src="fotos/Dog01.png" alt="Luzia">
+                <img src="fotos/Dog02.png" alt="Mimi">
+                <img src="fotos/Dog03.png" alt="Difusor">
+                <img src="fotos/Dog04.png" alt="Bartô">
+                <img src="fotos/DogGrade.png" alt="Luzia">
+       ''   </div>
         </div>
 
     </article>
