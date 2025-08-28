@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>ACAPRA - Notícias</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notícias</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #fff;
         }
+
         header {
             background: #5a518a;
             color: #fff;
-            padding: 0;
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -23,18 +28,22 @@
             padding: 0 30px;
             height: 80px;
         }
+
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
+
         .logo img {
             height: 55px;
         }
+
         nav {
             display: flex;
             gap: 40px;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -42,6 +51,7 @@
             font-size: 1.1em;
             position: relative;
         }
+
         .cta {
             text-decoration: none;
             background: none;
@@ -52,6 +62,7 @@
             cursor: pointer;
             padding: 10px 20px;
         }
+
         .title {
             text-align: center;
             margin: 40px 0 20px 0;
@@ -60,6 +71,7 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
+
         .carousel-container {
             max-width: 1400px;
             margin: 0 auto 40px auto;
@@ -68,7 +80,7 @@
             padding-bottom: 10px;
             scroll-behavior: smooth;
             display: flex;
-            justify-content: center; /* Centraliza o carrossel */
+            justify-content: center;
             align-items: center;
         }
 
@@ -76,8 +88,9 @@
             display: flex;
             gap: 40px;
             min-width: 1200px;
-            justify-content: center; /* Centraliza os itens */
-            align-items: stretch;    /* Faz os blocos ficarem alinhados verticalmente */
+            justify-content: center;
+            align-items: stretch;
+            
         }
 
         .carousel-item {
@@ -114,12 +127,14 @@
             align-items: center;
             justify-content: center;
         }
+
         .carousel-nav {
             display: flex;
             justify-content: center;
             gap: 8px;
             margin: 10px 0;
         }
+
         .carousel-nav label {
             width: 12px;
             height: 12px;
@@ -128,43 +143,52 @@
             display: block;
             cursor: pointer;
         }
+
         .carousel-inner {
             animation: carouselAuto 16s infinite;
         }
+
         .faq-section {
             background: #5a518a;
             color: #fff;
             padding: 50px 0;
         }
+
         .faq-container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .faq-title {
             text-align: center;
             font-size: 2em;
             margin-bottom: 40px;
             font-weight: bold;
         }
+
         .faq-question {
             font-weight: bold;
             margin-top: 30px;
             font-size: 1.15em;
         }
+
         .faq-answer {
             margin-bottom: 10px;
             font-size: 1.05em;
         }
+
         @media (max-width: 900px) {
             .carousel-wrapper {
                 min-width: 600px;
             }
+
             .carousel-item {
                 min-width: 180px;
                 max-width: 180px;
             }
         }
+
         @media (max-width: 600px) {
             .navbar {
                 flex-direction: column;
@@ -172,9 +196,11 @@
                 gap: 10px;
                 padding: 10px;
             }
+
             .carousel-wrapper {
                 min-width: 0;
             }
+
             .carousel-item {
                 min-width: 90vw;
                 max-width: 90vw;
@@ -182,18 +208,17 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">ACAPRA</a>
-            </div>
             <nav>
+                <a href="index.html">ACAPRA</a>
                 <a href="Sobre.html">Sobre</a>
                 <a href="Noticias.html">Notícias</a>
                 <a href="Contato.html">Contato</a>
+                <a href="Adocao.html">Adoção</a>
             </nav>
-            <a href="Adocao.html" class="cta">Quero adotar</a>
         </div>
     </header>
     <div class="title" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
@@ -227,17 +252,21 @@
             <div class="faq-title">Perguntas frequentes</div>
             <div class="faq-question">Como se voluntariar ?</div>
             <div class="faq-answer">
-                R: É fácil, entre no site "voluntarios.com.br" e procure por ACAPRA, após isso vá em processos seletivos e se candidate.
+                R: É fácil, entre no site "voluntarios.com.br" e procure por ACAPRA, após isso vá em processos seletivos
+                e se candidate.
             </div>
             <div class="faq-question">Qual a localização da sede ?</div>
             <div class="faq-answer">
-                R: A ACAPRA não tem uma localização definitiva, pois não é um abrigo de animais, mas sim lares temporários.
+                R: A ACAPRA não tem uma localização definitiva, pois não é um abrigo de animais, mas sim lares
+                temporários.
             </div>
             <div class="faq-question">Para quais fins é usado o dinheiro que foi doado ?</div>
             <div class="faq-answer">
-                R: O dinheiro recebido por doação é usado unicamente para tratar os animais. Compramos brinquedos aos animais, comida, banho, remédios, tosa e etc...
+                R: O dinheiro recebido por doação é usado unicamente para tratar os animais. Compramos brinquedos aos
+                animais, comida, banho, remédios, tosa e etc...
             </div>
         </div>
     </div>
 </body>
+
 </html>
