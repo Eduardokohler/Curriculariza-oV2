@@ -140,7 +140,7 @@ a {
 .texto-sobre p {
   width: 500px;
   margin-bottom: 1px;
-  color: rgba(85, 80, 134, 1);
+  color: rgb(0, 0, 0);
   text-align: left;
 }
 
