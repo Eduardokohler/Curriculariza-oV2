@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>ACAPRA - Notícias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/khand" rel="stylesheet">
+    <title>Notícias</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
             background: #fff;
         }
+
         header {
-            background: #5a518a;
+            background-color: #5a518a;
             color: #fff;
-            padding: 0;
         }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
-            height: 80px;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .logo img {
-            height: 55px;
-        }
+
+        
         nav {
+            padding: 20px;
+            background-color: rgba(85, 80, 134, 1);
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
-            gap: 40px;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100px; 
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
-            position: relative;
         }
+
+       
         .cta {
-            text-decoration: none;
             background: none;
             border: none;
             color: #fff;
@@ -52,52 +51,45 @@
             cursor: pointer;
             padding: 10px 20px;
         }
-        .title {
+
+        
+        .title,
+        main h1 {
             text-align: center;
             margin: 40px 0 20px 0;
             color: #5a518a;
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: bold;
-            letter-spacing: 2px;
+            padding: 40px;
         }
+
+        
         .carousel-container {
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto 40px auto;
-            overflow-x: auto;
-            overflow-y: visible;
-            padding-bottom: 10px;
-            scroll-behavior: smooth;
-            display: flex;
-            justify-content: center; /* Centraliza o carrossel */
-            align-items: center;
+            overflow: hidden;
+            position: relative;
         }
 
         .carousel-wrapper {
             display: flex;
-            gap: 40px;
-            min-width: 1200px;
-            justify-content: center; /* Centraliza os itens */
-            align-items: stretch;    /* Faz os blocos ficarem alinhados verticalmente */
+            width: 300%;
+            animation: slide 12s infinite;
         }
 
         .carousel-item {
-            background: #eee;
-            border-radius: 8px;
-            overflow: hidden;
+            flex: 0 0 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 300px;
-            max-width: 300px;
-            height: 100%;
             justify-content: flex-start;
         }
 
         .carousel-item img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
         }
 
         .carousel-caption {
@@ -107,99 +99,97 @@
             font-size: 1em;
             text-align: center;
             width: 100%;
-            margin-top: auto;
             border-radius: 0 0 8px 8px;
             box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin: 10px 0;
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+
+            30% {
+                transform: translateX(0%);
+            }
+
+            33% {
+                transform: translateX(-100%);
+            }
+
+            63% {
+                transform: translateX(-100%);
+            }
+
+            66% {
+                transform: translateX(-200%);
+            }
+
+            96% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
         }
-        .carousel-nav label {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            display: block;
-            cursor: pointer;
-        }
-        .carousel-inner {
-            animation: carouselAuto 16s infinite;
-        }
+
+        /* FAQ */
         .faq-section {
             background: #5a518a;
             color: #fff;
             padding: 50px 0;
         }
+
         .faq-container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .faq-title {
             text-align: center;
             font-size: 2em;
             margin-bottom: 40px;
             font-weight: bold;
         }
+
         .faq-question {
             font-weight: bold;
             margin-top: 30px;
             font-size: 1.15em;
         }
+
         .faq-answer {
             margin-bottom: 10px;
             font-size: 1.05em;
         }
-        @media (max-width: 900px) {
-            .carousel-wrapper {
-                min-width: 600px;
-            }
-            .carousel-item {
-                min-width: 180px;
-                max-width: 180px;
-            }
-        }
+
         @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                height: auto;
-                gap: 10px;
-                padding: 10px;
-            }
-            .carousel-wrapper {
-                min-width: 0;
-            }
-            .carousel-item {
-                min-width: 90vw;
-                max-width: 90vw;
+            .carousel-item img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: contain;
+                border-radius: 8px 8px 0 0;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">ACAPRA</a>
-            </div>
-            <nav>
-                <a href="Sobre.html">Sobre</a>
-                <a href="Noticias.html">Notícias</a>
-                <a href="Contato.html">Contato</a>
-            </nav>
-            <a href="Adocao.html" class="cta">Quero adotar</a>
-        </div>
+        <nav>
+            <a href="index.html">ACAPRA</a>
+            <a href="Sobre.html">Sobre</a>
+            <a href="Noticias.html">Notícias</a>
+            <a href="Contato.html">Contato</a>
+            <a href="Adocao.html">Adoção</a>
+        </nav>
     </header>
+
     <div class="title" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-        <img src="fotos/logo.roxa.jpg" alt="Logo ACAPRA" style="height:50px;">
         <span>NOTÍCIAS</span>
     </div>
+
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-item">
@@ -222,22 +212,27 @@
             </div>
         </div>
     </div>
+
     <div class="faq-section">
         <div class="faq-container">
             <div class="faq-title">Perguntas frequentes</div>
             <div class="faq-question">Como se voluntariar ?</div>
             <div class="faq-answer">
-                R: É fácil, entre no site "voluntarios.com.br" e procure por ACAPRA, após isso vá em processos seletivos e se candidate.
+                R: É fácil, entre no site "voluntarios.com.br" e procure por ACAPRA, após isso vá em processos seletivos
+                e se candidate.
             </div>
             <div class="faq-question">Qual a localização da sede ?</div>
             <div class="faq-answer">
-                R: A ACAPRA não tem uma localização definitiva, pois não é um abrigo de animais, mas sim lares temporários.
+                R: A ACAPRA não tem uma localização definitiva, pois não é um abrigo de animais, mas sim lares
+                temporários.
             </div>
             <div class="faq-question">Para quais fins é usado o dinheiro que foi doado ?</div>
             <div class="faq-answer">
-                R: O dinheiro recebido por doação é usado unicamente para tratar os animais. Compramos brinquedos aos animais, comida, banho, remédios, tosa e etc...
+                R: O dinheiro recebido por doação é usado unicamente para tratar os animais. Compramos brinquedos aos
+                animais, comida, banho, remédios, tosa e etc...
             </div>
         </div>
     </div>
 </body>
+
 </html>
