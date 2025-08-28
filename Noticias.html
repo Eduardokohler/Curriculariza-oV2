@@ -3,35 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Notícias</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, Helvetica, sans-serif;
             background: #fff;
         }
 
         header {
-            background: #5a518a;
+            background-color: #5a518a;
             color: #fff;
         }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
-            height: 80px;
-        }
-
+        /* NAV padrão do sobre */
         nav {
+            padding: 20px;
+            background-color: rgba(85, 80, 134, 1);
+            font-family: 'Khand', sans-serif;
             display: flex;
-            gap: 40px;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100px; /* mais alto que o sobre */
         }
 
         nav a {
@@ -39,11 +39,10 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1em;
-            position: relative;
         }
 
+        /* Botão CTA */
         .cta {
-            text-decoration: none;
             background: none;
             border: none;
             color: #fff;
@@ -53,16 +52,18 @@
             padding: 10px 20px;
         }
 
-        .title {
+        /* Título igual ao sobre */
+        .title,
+        main h1 {
             text-align: center;
             margin: 40px 0 20px 0;
             color: #5a518a;
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: bold;
-            letter-spacing: 2px;
+            padding: 40px;
         }
 
-
+        /* CARROSSEL */
         .carousel-container {
             max-width: 1000px;
             margin: 0 auto 40px auto;
@@ -102,7 +103,6 @@
             box-sizing: border-box;
         }
 
-
         @keyframes slide {
             0% {
                 transform: translateX(0%);
@@ -133,7 +133,7 @@
             }
         }
 
-
+        /* FAQ */
         .faq-section {
             background: #5a518a;
             color: #fff;
@@ -164,7 +164,6 @@
             font-size: 1.05em;
         }
 
-        
         @media (max-width: 600px) {
             .carousel-item img {
                 width: 100%;
@@ -178,20 +177,20 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <nav>
-                <a href="index.html">ACAPRA</a>
-                <a href="Sobre.html">Sobre</a>
-                <a href="Noticias.html">Notícias</a>
-                <a href="Contato.html">Contato</a>
-                <a href="Adocao.html">Adoção</a>
-            </nav>
-        </div>
+        <nav>
+            <a href="index.html">ACAPRA</a>
+            <a href="Sobre.html">Sobre</a>
+            <a href="Noticias.html">Notícias</a>
+            <a href="Contato.html">Contato</a>
+            <a href="Adocao.html">Adoção</a>
+        </nav>
     </header>
+
     <div class="title" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
         <img src="fotos/logo.roxa.jpg" alt="Logo ACAPRA" style="height:50px;">
         <span>NOTÍCIAS</span>
     </div>
+
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-item">
@@ -214,6 +213,7 @@
             </div>
         </div>
     </div>
+
     <div class="faq-section">
         <div class="faq-container">
             <div class="faq-title">Perguntas frequentes</div>
