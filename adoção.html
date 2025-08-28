@@ -69,11 +69,10 @@
             transform: scale(1.1);
         }
 
-        /* --- DOIS CARROSSEIS --- */
         .carousels-wrapper {
             position: fixed;
             top: 50%;
-            right: 150px; /* mais para a direita */
+            right: 150px; 
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -82,8 +81,8 @@
         }
 
         .carousel-container {
-            width: 220px;   /* menor */
-            height: 220px;  /* menor */
+            width: 220px;   
+            height: 220px;  
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -101,7 +100,7 @@
         }
 
         .carousel img {
-            width: 200px;  /* proporcional ao container */
+            width: 200px;  
             height: 200px;
             object-fit: cover;
             border-radius: 12px;
@@ -113,7 +112,6 @@
             transform: scale(1.08);
         }
 
-        /* animação horizontal */
         @keyframes scrollX {
             0%   { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
@@ -160,9 +158,7 @@
         </div>
     </nav>
 
-    <!-- DOIS CARROSSEIS -->
     <div class="carousels-wrapper">
-        <!-- Carrossel GATOS -->
         <div class="carousel-container">
             <div class="carousel">
                 <img src="fotos/gatos/gato1.jpg" alt="Gato 1">
@@ -172,7 +168,6 @@
             </div>
         </div>
 
-        <!-- Carrossel CACHORROS -->
         <div class="carousel-container">
             <div class="carousel">
                 <img src="fotos/cachorros/cao1.jpg" alt="Cachorro 1">
