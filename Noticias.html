@@ -77,20 +77,17 @@
             animation: slide 12s infinite;
         }
 
-        .carousel-item {
-            flex: 0 0 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
+          .carousel-item img {
+            width: 80%;
+            max-width: 600px;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: block;
         }
 
-        .carousel-item img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 8px 8px 0 0;
-        }
+    
 
         .carousel-caption {
             background: #5a518a;
@@ -274,7 +271,9 @@
         </div>
     </div>
 
-    <div class="faq-section">
+    
+    <footer>
+        <div class="faq-section">
         <div class="faq-container">
             <div class="faq-title">Perguntas frequentes</div>
             <div class="faq-question">Como se voluntariar ?</div>
@@ -293,8 +292,11 @@
                 animais, comida, banho, remédios, tosa e etc...
             </div>
         </div>
-    </div>
-    <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="footer-container">
             <div class="footer-section">
                 <div class="footer-brand">Acapra</div>
