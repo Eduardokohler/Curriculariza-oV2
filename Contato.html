@@ -76,6 +76,68 @@
             justify-content: center;
             align-items: center;
         }
+
+        footer {
+        background: linear-gradient(135deg, #5a518a 0%, #4a4178 100%);
+        color: #fff;
+        padding: 50px 20px 20px;
+        margin-top: 60px;
+        }
+
+        .footer-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+        }
+
+        .footer-section {
+        flex: 1;
+        }
+
+        .footer-section h3 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: 600;
+        position: relative;
+        }
+
+        .footer-section h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        }
+
+        .footer-section p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95em;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        }
+
+        .footer-section a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 0.95em;
+        padding: 4px 0;
+        }
+
+        .footer-brand {
+        font-size: 1.3em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        }
+
     </style>
 </head>
 
@@ -104,6 +166,26 @@
         <h3>Caixa Postal</h3>
         <p>496</p>
     </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-brand">Acapra</div>
+                <p>Em busca de um lar para nossos amigos de quatro patas.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <a href="index.html">Home</a>
+                <a href="Sobre.html">Sobre</a>
+                <a href="Contato.html">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>apedami@bol.com.br</p>
+                <p>(47) 9 9911-1652</p>
+                <p>Brusque, SC</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

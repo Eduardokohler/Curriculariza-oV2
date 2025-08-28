@@ -65,15 +65,14 @@
         }
 
         #doguinho {
-        position: fixed;     
-        right: 0;           
-        bottom: 0;          
-        max-width: 500px;    
-        height: auto;
-        z-index: 1000; 
-        transition: opacity 3s ease-in-out, transform 3s ease-in-out;
-        opacity: 1;
-
+            position: absolute;   /* Muda de fixed para absolute */
+            right: 0;
+            bottom: 0;
+            max-width: 500px;
+            height: auto;
+            z-index: 1000;
+            transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+            opacity: 1;
         }
 
         #doguinho:hover {
@@ -81,8 +80,6 @@
         opacity: 1;
         transform: scale(1.1);
         }
-
-
 
     </style>
 </head>
@@ -138,7 +135,6 @@
     <article>
 
     </article>
-    <footer>
-    </footer>
+
 </body>
 </html>
