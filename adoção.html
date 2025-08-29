@@ -9,12 +9,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background-color: white; font-family: 'Khand', sans-serif; }
 
-    /* Cabeçalho fixo acima de tudo */
+
     header {
       background-color: #5a518a;
       color: #fff;
-      position: relative; /* necessário para o z-index funcionar */
-      z-index: 1000; /* maior que o carrossel */
+      position: relative; 
+      z-index: 1000; 
     }
 
     nav {
@@ -35,7 +35,6 @@
       font-size: 18px;
     }
 
-    /* Estilos específicos da página */
     .carousels-wrapper {
       display: flex;
       top: 50%;
@@ -114,6 +113,67 @@
     }
 
     .btn-adotar:hover { background-color: rgb(70, 66, 110); }
+
+    footer {
+        background: linear-gradient(135deg, #5a518a 0%, #4a4178 100%);
+        color: #fff;
+        padding: 50px 20px 20px;
+        margin-top: 60px;
+        }
+
+        .footer-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+        }
+
+        .footer-section {
+        flex: 1;
+        }
+
+        .footer-section h3 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: 600;
+        position: relative;
+        }
+
+        .footer-section h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        }
+
+        .footer-section p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95em;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        }
+
+        .footer-section a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 0.95em;
+        padding: 4px 0;
+        }
+
+        .footer-brand {
+        font-size: 1.3em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        }
   </style>
 </head>
 <body>
@@ -155,6 +215,49 @@
     </div>
   </div>
 
-  <footer></footer>
+  <footer>
+        <div class="faq-section">
+        <div class="faq-container">
+            <div class="faq-title">Perguntas frequentes</div>
+            <div class="faq-question">Como se voluntariar ?</div>
+            <div class="faq-answer">
+                R: É fácil, entre no site "voluntarios.com.br" e procure por ACAPRA, após isso vá em processos seletivos
+                e se candidate.
+            </div>
+            <div class="faq-question">Qual a localização da sede ?</div>
+            <div class="faq-answer">
+                R: A ACAPRA não tem uma localização definitiva, pois não é um abrigo de animais, mas sim lares
+                temporários.
+            </div>
+            <div class="faq-question">Para quais fins é usado o dinheiro que foi doado ?</div>
+            <div class="faq-answer">
+                R: O dinheiro recebido por doação é usado unicamente para tratar os animais. Compramos brinquedos aos
+                animais, comida, banho, remédios, tosa e etc...
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-brand">Acapra</div>
+                <p>Em busca de um lar para nossos amigos de quatro patas.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <a href="index.html">Home</a>
+                <a href="Sobre.html">Sobre</a>
+                <a href="Contato.html">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>apedami@bol.com.br</p>
+                <p>(47) 9 9911-1652</p>
+                <p>Brusque, SC</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
