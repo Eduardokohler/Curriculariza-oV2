@@ -6,28 +6,47 @@
   <link href="https://fonts.cdnfonts.com/css/khand" rel="stylesheet">
   <title>Adoção</title>
   <style>
-    * { margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background-color: white; font-family: 'Khand', sans-serif; }
-    #logoroxa { scale: 75%; display: block; }
-    h1 { font-size: 20px; color: rgba(85, 80, 134, 1); }
-    header { margin-left: 40px; display: flex; justify-content: flex-start; align-items: center; }
-    nav { padding: 20px; }
-    .nav-container { display: flex; }
-    ul { list-style: none; margin-left: 40px; padding: 0; width: 60%; }
-    li { margin-bottom: 10px; }
-    a { font-weight: bold; color: rgba(85, 80, 134, 1); text-decoration: none; }
-    p { margin: 0; font-size: 14px; color: rgba(85, 80, 134, 1); }
 
+    /* Cabeçalho fixo acima de tudo */
+    header {
+      background-color: #5a518a;
+      color: #fff;
+      position: relative; /* necessário para o z-index funcionar */
+      z-index: 1000; /* maior que o carrossel */
+    }
+
+    nav {
+      padding: 20px;
+      background-color: rgba(85, 80, 134, 1);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      height: 100px; 
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Estilos específicos da página */
     .carousels-wrapper {
-      position: fixed;
+      display: flex;
       top: 50%;
       right: 150px;
       transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
       gap: 30px;
       z-index: 999;
+      padding-top: 500px;
+      justify-content: center; 
     }
+
     .carousel-container {
       width: 220px;
       background: rgba(255, 255, 255, 0.85);
@@ -45,11 +64,13 @@
       overflow: hidden;
       position: relative;
     }
+
     .track {
       display: flex;
       width: calc(220px * 4); 
       animation: slideOneByOne 16s infinite;
     }
+
     .slide {
       flex: 0 0 220px;
       height: 220px;
@@ -57,6 +78,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .carousel img {
       width: 220px;
       height: 220px;
@@ -65,6 +87,7 @@
       box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
     }
+
     .carousel img:hover { transform: scale(1.08); }
 
     @keyframes slideOneByOne {
@@ -89,50 +112,23 @@
       box-shadow: 0px 2px 6px rgba(0,0,0,0.25);
       transition: background 0.3s ease;
     }
+
     .btn-adotar:hover { background-color: rgb(70, 66, 110); }
   </style>
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
-    <figure><img src="fotos/logoRoxa1.png" alt="Logo" id="logoroxa"></figure>
-    <h1>ACAPRA</h1>
+    <nav>
+      <a href="index.html">ACAPRA</a>
+      <a href="Sobre.html">Sobre</a>
+      <a href="Noticias.html">Notícias</a>
+      <a href="Contato.html">Contato</a>
+      <a href="Adocao.html">Adoção</a>
+    </nav>
   </header>
 
-  <nav>
-    <div class="nav-container">
-      <ul>
-        <li>
-          <a href="Sobre.html">Sobre</a>
-          <p>Conheça mais sobre a nossa história</p>
-        </li>
-        <li>
-          <a href="Adocao.html">Adoção</a>
-          <p>Veja quem está esperando por você</p>
-        </li>
-        <li>
-          <a href="Noticias.html">Notícias/Perguntas</a>
-          <p>Veja as últimas atualizações da ACAPRA e tire suas dúvidas</p>
-        </li>
-        <li>
-          <a href="MausTratos.html">Maus-tratos</a>
-          <p>Denuncie e se informe</p>
-        </li>
-        <li>
-          <a href="HistoriaDeAnimaisDoados.html">Animais já doados</a>
-          <p>Histórias de animais que já foram adotados</p>
-        </li>
-        <li>
-          <a href="Contato.html">Contato</a>
-          <p>Entre em contato conosco</p>
-        </li>
-        <li>
-          <a href="Estatisticas.html">Estatísticas</a>
-          <p>Veja alguns dados sobre a ACAPRA</p>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+  <!-- Carrosséis -->
   <div class="carousels-wrapper">
     <div class="carousel-container">
       <div class="carousel">
